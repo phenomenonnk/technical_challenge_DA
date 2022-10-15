@@ -1,1 +1,37 @@
-v
+some of the trends and insights from the data
+
+some insights we can get from the scatterplots
+ 
+consume - distance: negative exponential distribution,
+for high distances we have lower consume and for small distances we have high consume but in a negative exponential way 
+
+consume - consume: the perfect linear regression as we have the same features 
+
+speed - consume: we can notice that in low speed we have some high consume observations, seems to be something between linear and negative exponential distribution,
+it could also be polynomial, we can fit a trend line in Tableau and check what really happens. 
+We can assume that the low speed is inside a city where we know that consumption is higher than outside a city
+ 
+temperature_inside - consume: some high consume values exist when the temperature inside are 20 and 22 degrees C,
+but we don't have a clear picture 
+
+temperature_outside - consume: some high consume values exist when the temperature inside are between 4 and 14 degrees C,
+but we don't have a clear picture 
+
+gas_type - consume: sp98 gas type tend to have higher consumption than E10 
+
+gas type air_condition - consume: some times when the car has no air condition the consumption is higher than the times with air condition.
+Really weird insight but there could be some other factors that effect the consumption 
+
+rain - consume: there is no useful insight sun - consume: driving without sun tend to have higher consumption
+
+
+the highest correlation is between temperature_outside and consume: -0.318758 (negative correlation) and then with rain and speed.
+So these are the most important features for consumption.
+
+
+Random forest regressor and K Nearest Neighbors Regressor for k=5 are the models which fitted better the data
+
+From tableau we cannot notice significant difference for the gas types but we can use ANOVA to compare the means of the 2 gas types and check of we have  
+significant difference
+
+No time to finish it
