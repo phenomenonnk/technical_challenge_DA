@@ -31,7 +31,46 @@ So these are the most important features for consumption.
 
 Random forest regressor and K Nearest Neighbors Regressor for k=5 are the models which fitted better the data
 
-From tableau we cannot notice significant difference for the gas types but we can use ANOVA to compare the means of the 2 gas types and check of we have  
-significant difference
+From tableau we cannot notice significant difference for the gas types but we can use t test
+to compare the means of the 2 gas types and check if we have significant difference
+
+if μ: the mean of consumption for the gas type E10 and 
+μ0: the mean of consumption for the gas type SP98 
+
+Step 1: Define the null hypothesis (the opposite from what we check)
+The goal in classic inferential statistics is to prove the null hypothesis wrong
+null hypothesis -> H0: μ >= μ0 , means that the mean of consumption for the gas type E10
+ >= μ0 the mean of consumption for the gas type SP98
+we could also check as null hypothesis -> H0: μ - μ0 >= 0
+
+Step 2: Define the alternative hypothesis
+This means, what if our assumption is not true.
+alternative hypothesis -> H1 (or Ha): μ < μ0, means that the mean of consumption for the gas type E10
+ < μ0 the mean of consumption for the gas type SP98
+we could also check as alternative hypothesis -> H0: μ - μ0 < 0
+
+Step 3: Determine if it is an one-tailed or a two-tailed test, it is an one-tailed test.
+
+Step 4: Decide a test statistics based on the information available.
+Assuming data is normally distributed and number of observations are less than 30 and variance
+is known (we can compute it), we will use a t-test.
+This test is based on a "t-distribution" which is a normal distribution.
+If the population variance was not known or the testing sample is less then 30, 
+we use a t-test. T test is based on students t distribution which is very similar to
+a standard normal distribution except that it is much flatter. Although we have 
+number of observations more than 30 and if we assume that the population standard deviation is known, 
+we can use z test
+
+Step 5: Level of significance: This defines the rejection region/critical region,
+it's the probability of making the wrong decision when the null hypothesis is true.¶
+we will use α=0,05
+
+Step 6: Calculate the test statistic based on the given information
+we will use t-test
+
+if p-value is p-value< a=0.05
+we reject the null hypothesis and we accept the alternative hypothesis that
+H1 (or Ha): μ < μ0 or the mean of consumption for the gas type E10 is significant less than the 
+mean of consumption for the gas type SP98 and vice versa 
 
 No time to finish it
